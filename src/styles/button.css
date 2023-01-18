@@ -1,0 +1,332 @@
+p{
+  margin: 0;
+  padding: 0;
+}
+
+/* button{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+button {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border: 0;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 1;
+
+}
+
+.button {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.button--load {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-filled--load {
+  background-color: lightgray;
+}
+
+.button-outline--load {
+  background-color: transparent;
+  border: 1px solid lightgray;
+}
+
+.button-reverse--load {
+  background-color: transparent;
+}
+
+.button--outline{
+  border: 1px solid;
+}
+
+.button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 2px 3px #BABABA;
+}
+
+.button-filled--primary {
+  color: white;
+  background-color: #6B82F8;
+}
+
+.button-filled--primary:hover{
+  background-color: #3A59F6;
+}
+
+.button-filled--primary:active{
+  background-color: #1D2F9B;
+}
+
+.button-filled--secondary {
+  color: white;
+  background-color: #01B3AF;
+ }
+
+.button-filled--secondary:hover{
+  background-color: #01807D
+}
+
+.button-filled--secondary:active{
+  background-color: #004E4C
+}
+
+.button-filled--success {
+  color: white;
+  background-color: #70b200;
+ }
+
+.button-filled--success:hover{
+  background-color: #507F00
+}
+
+.button-filled--success:active{
+  background-color: #304C00
+}
+
+.button-filled--warning {
+  color: white;
+  background-color: #E6C400;
+ }
+
+.button-filled--warning:hover{
+  background-color: #B39900
+}
+
+.button-filled--warning:active{
+  background-color: #806D00
+}
+
+.button-filled--error {
+  color: white;
+  background-color: #CF2A17;
+ }
+
+.button-filled--error:hover{
+  background-color: #B31300
+}
+
+.button-filled--error:active{
+  background-color: #800D00
+}
+
+.button-reverse--primary {
+  color: #3A59F6;
+  background-color: transparent;
+}
+
+.button-outline--primary, .button-reverse--primary {
+  color: #3A59F6;
+  background-color: transparent;
+  border-color: #6B82F8;
+}
+
+.button-outline--primary:hover, .button-reverse--primary:hover{
+  color: white;
+  background-color: #6B82F8;
+}
+
+.button-outline--primary:active, .button-reverse--primary:active{
+  background-color: #3A59F6;
+  border-color: #3A59F6;
+}
+
+.button-outline--secondary, .button-reverse--secondary {
+  color: #01807D;
+  background-color: transparent;
+  border-color: #01B3AF;
+}
+
+.button-outline--secondary:hover, .button-reverse--secondary:hover{
+  color: white;
+  background-color: #01B3AF;
+}
+
+.button-outline--secondary:active, .button-reverse--secondary:active{
+  background-color: #01807D;
+  border-color: #01807D;
+}
+
+.button-outline--success,.button-reverse--success {
+  color: #507F00;
+  background-color: transparent;
+  border-color: #70b200;
+ }
+
+.button-outline--success:hover,.button-reverse--success:hover{
+  color: white;
+  background-color: #70b200
+}
+
+.button-outline--success:active, .button-reverse--success:active{
+  background-color: #507F00;
+  border-color: #507F00;
+}
+
+.button-outline--warning, .button-reverse--warning {
+  color: #806D00;
+  border-color: #E6C400;
+  background-color: transparent;
+ }
+
+.button-outline--warning:hover, .button-reverse--warning:hover{
+  color: white;
+  background-color: #E6C400;
+  border-color: #E6C400;
+}
+
+.button-outline--warning:active, .button-reverse--warning:active{
+  background-color: #B39900;
+  border-color:#B39900;
+}
+
+.button-outline--error, .button-reverse--error {
+  color: #CF2A17;
+  background-color: transparent;
+  border-color: #CF2A17;
+}
+
+.button-outline--error:hover, .button-reverse--error:hover{
+  color: white;
+  background-color: #CF2A17;
+}
+
+.button-outline--error:active, .button-reverse--error:active{
+  background-color: #B31300;
+  border-color: #B31300;
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.button--fullwidth {
+  width: 100%;
+}
+
+.button--small {
+  font-size: 12px;
+  padding: 0.8em 2em;
+}
+.button--medium {
+  font-size: 14px;
+  padding: 0.8em 3em;
+}
+
+.button--large {
+  font-size: 16px;
+  padding: 0.8em 4em;
+}
+
+.loader--active {
+  position: absolute;
+}
+
+.text--load{
+  visibility: hidden;
+}
+
+/* The more serious tone */
+/* .button {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.button-filled--primary {
+  color: white;
+  background-color: #9F5841;
+  transition: background-color 0.4s ease;
+}
+
+.button-filled--primary:hover{
+  color: #3C2B25;
+  background-color: #CBB1A8;
+}
+
+.button-reverse--primary {
+  color: #9F5841;
+  background-color: white;
+  transition: background-color 0.4s ease;
+}
+
+.button-reverse--primary:hover{
+  color: #3C2B25;
+  background-color: #CBB1A8;
+}
+
+.button-filled--secondary {
+  color: white;
+  background-color: #123132;
+  transition: background-color 0.4s ease;
+}
+
+.button-filled--secondary:hover{
+  color: white;
+  background-color: #44595b
+}
+
+.button-reverse--secondary {
+  color: #123132;
+  background-color: white;
+  transition: background-color 0.4s ease;
+}
+
+.button-reverse--secondary:hover{
+  color: white;
+  background-color: #44595b
+}
+
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.button--fullwidth {
+  width: 100%;
+}
+
+.button--medium {
+  font-size: 14px;
+  padding: 0.6875em 3em;
+} */
+
+.button-list--wrapper{
+  padding: 0;
+  margin: 0;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.button-list--child {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+
+Button, .button-list--text {
+  align-self: center
+}
+
+.button-list--text{
+  color: #2F2E41;
+  font-size: 12px;
+  margin: 0;
+  margin-top: 2px;
+  font-style: italic;
+}

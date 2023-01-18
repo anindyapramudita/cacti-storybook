@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.spinner--wrapper{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #6B82F8;
+    border-radius: 50%;
+    border-bottom-color: transparent !important;
+    animation: spinnerLoad 1.5s ease infinite;
+}
+
+.spinner--outer{
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner--inner{
+    width: 60%;
+    height: 60%;
+    border: 3px solid #6B82F8;
+    border-radius: 50%;
+    border-bottom-color: transparent !important;
+    animation: spinnerLoad 1s ease infinite;
+}
+
+@keyframes spinnerLoad{
+    from{transform: rotate(0turn);}
+    to{transform: rotate(1turn);}
+}
+
+.circle--wrapper{
+    display: flex;
+}
+
+.inner-circle{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background-color:#6B82F8;
+    transform-origin: 50% 50%;
+    animation: grow 1s ease infinite;
+}
+
+.inner-circle--mini{
+    width:7px;
+    height:7px;
+    margin: 0 5px;
+}
+.inner-circle--small{
+    width:10px;
+    height:10px;
+    margin: 0 6px;
+}
+.inner-circle--medium{
+    width:12px;
+    height:12px;
+    margin: 0 10px;
+}
+.inner-circle--large{
+    width:16px;
+    height:16px;
+    margin: 0 12px;
+}
+
+
+#little-two {
+    animation-delay: 0.1s;
+}
+
+#little-three {
+    animation-delay: 0.2s;
+}
+
+@keyframes grow{
+    0%   {transform: scale(1)}
+    50%  {transform: scale(1.2)}
+    100% {transform: scale(1)}
+}
