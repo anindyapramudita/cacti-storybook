@@ -1,10 +1,12 @@
 interface AdjustIconProps {
     adjustIconColor?: string;
+    width?: string;
+    height?: string;
 }
 
-export const AdjustIcon = ({adjustIconColor = '#000000'}: AdjustIconProps) => {
+export const AdjustIcon = ({adjustIconColor = '#000000', width='13px', height='13px'}: AdjustIconProps) => {
     return (
-        <svg width="15px" height="15px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 
             <g id="SVGRepo_bgCarrier" stroke-width="0" />
 

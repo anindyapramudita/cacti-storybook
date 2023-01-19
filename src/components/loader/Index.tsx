@@ -13,11 +13,11 @@ export interface LoaderProps {
   /**
    * If you're using spinner, what do you want the border color to be?
    */
-  borderColor?: string;
+  spinnerColor?: string;
   /**
    * If you're using dots, what color do you want the dots to be?
    */
-  backgroundColor?: string;
+  DotsColor?: string;
   /**
    * How large should the button be?
    */
@@ -30,12 +30,12 @@ export interface LoaderProps {
 export const Loader = ({
     type='spinner',
     size='medium',
-    borderColor,
-    backgroundColor,
+    spinnerColor,
+    DotsColor,
 }: LoaderProps) => {
   return (
     <div>
-      {type === 'spinner' ? <SpinnerLoad borderColor={borderColor} size={size}/> : <DotsLoad backgroundColor={backgroundColor} size={size}/>}
+      {type === 'spinner' ? <SpinnerLoad borderColor={spinnerColor} size={size}/> : <DotsLoad backgroundColor={DotsColor} size={size}/>}
     </div>
   );
 };

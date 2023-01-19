@@ -23,8 +23,44 @@ const allTypes: buttonType[] = [buttonType.primary, buttonType.secondary]
 
 const Template: ComponentStory<typeof Chip> = (args) => <Chip {...args} />;
 
-export const Filled = Template.bind({});
-Filled.args = {
-  label: 'Button',
+export const FilledWithIcon = Template.bind({});
+FilledWithIcon.args = {
+  label: 'Adjust',
   startIcon: <AdjustIcon adjustIconColor='white'/>
+};
+
+export const FilledWithoutIcon = Template.bind({});
+FilledWithoutIcon.args = {
+  label: 'Adjust'
+};
+
+export const OutlinedWithIcon = Template.bind({});
+OutlinedWithIcon.args = {
+  label: 'Adjust',
+  startIcon: <AdjustIcon adjustIconColor='grey'/>,
+  type: 'outlined'
+};
+
+export const FilledClosable = Template.bind({});
+FilledClosable.args = {
+  label: 'Adjust',
+  startIcon: <AdjustIcon adjustIconColor='white'/>,
+  closable: true
+};
+
+export const OutlinedClosable = Template.bind({});
+OutlinedClosable.args = {
+  label: 'Adjust',
+  startIcon: <AdjustIcon adjustIconColor='grey'/>,
+  type: 'outlined',
+  closable: true
+};
+
+export const OutlinedActive = Template.bind({});
+OutlinedActive.args = {
+  label: 'Adjust',
+  startIcon: <AdjustIcon adjustIconColor='grey'/>,
+  type: 'outlined',
+  closable: true,
+  isActive: true
 };
