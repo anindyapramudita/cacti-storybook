@@ -1,15 +1,16 @@
 import '../../styles/button.css';
 import { DotsLoad } from '../loader/Dots';
 
-export interface ButtonProps {
+export interface ButtonProps
+extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Is this the principal call to action on the page?
    */
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'error';
+  color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error';
   /**
    * What type is the button
    */
-  type?: 'filled' | 'reverse' | 'outline';
+  variant?: 'filled' | 'reverse' | 'outline';
   /**
    * What background color to use
    */
@@ -40,20 +41,20 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  variant = 'primary',
+  color = 'primary',
   size = 'medium',
-  type = 'filled',
+  variant = 'filled',
   fullWidth=false,
   backgroundColor,
   isLoading=false,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = isLoading ? '' :['button-', `${type}`, `--${variant}`].join("")
+  const mode = isLoading ? '' :['button-', `${variant}`, `--${color}`].join("")
   const buttonWidth = fullWidth ? 'button--fullwidth' : ''
-  const load = isLoading ? `button--load button-${type}--load` : `button button--${type}`
+  const load = isLoading ? `button--load button-${variant}--load` : `button button--${variant}`
   const loaderIcon = isLoading ? `loader--active` : ''
-  const loaderColor = type === 'filled' ? 'white' : 'lightgray'
+  const loaderColor = variant === 'filled' ? 'white' : 'lightgray'
 
   return (
     <button

@@ -1,6 +1,7 @@
 import '../../styles/input.css';
 
-export interface InputProps {
+export interface InputProps
+extends React.InputHTMLAttributes<HTMLInputElement> {
     /**
      * Label for the input
      */
@@ -40,7 +41,7 @@ export interface InputProps {
     /**
      * Is the input disabled?
      */
-    isDisabled: boolean;
+    isDisabled?: boolean;
 }
 
 /**

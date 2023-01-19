@@ -27,25 +27,25 @@ const AllButtonTemplate: ComponentStory<typeof ButtonList> = (args) => <ButtonLi
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: 'primary',
+  color: 'primary',
   label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  variant: 'secondary',
+  color: 'secondary',
   label: 'Button',
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
-  type: 'outline',
+  variant: 'outline',
   label: 'Button',
 };
 
 export const Reverse = Template.bind({});
 Reverse.args = {
-  type: 'reverse',
+  variant: 'reverse',
   label: 'Button',
 };
 

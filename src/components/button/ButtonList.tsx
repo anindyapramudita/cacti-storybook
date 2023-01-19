@@ -13,8 +13,8 @@ export default function ButtonList({ buttons }:ButtonListProps) {
     <div className="button-list--wrapper">
       {buttons.map((buttonProp: ButtonProps, id:number) => (
         <div className='button-list--child'>
-          <Button variant={buttonProp.variant} type={buttonProp.type} label={buttonProp.label} />
-          <p className='button-list--text'>{`button-${buttonProp.type}--${buttonProp.variant}`}</p>
+          <Button color={buttonProp.color} variant={buttonProp.variant} label={buttonProp.label} />
+          <p className='button-list--text'>{`button-${buttonProp.variant}--${buttonProp.color}`}</p>
         </div>
       ))}
     </div>
