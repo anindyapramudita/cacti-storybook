@@ -1,0 +1,181 @@
+input[type="checkbox"].toggle{
+    opacity: 0;
+    position: absolute;
+
+    left: -9000px;
+    right: -90000px;
+}
+input[type="checkbox"].toggle + label{
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"].toggle:disabled + label{
+    cursor: default;
+}
+
+input[type="checkbox"].toggle-pill:focus + label::before{
+    outline: 1px solid #6B82F8;
+    outline-offset: .2em;
+}
+
+input[type="checkbox"].toggle + label::before{
+    content:"";
+    /* width: 4em;
+    height: 2em; */
+    background-color: #DDD;
+    border-radius: 1em;
+    transition: background-color 200ms ease-in-out;
+}
+
+input[type="checkbox"].toggle-pill + label::before{
+    /* content:""; */
+    width: 4em;
+    height: 2em;
+    /* background-color: #DDD; */
+    border-radius: 1em;
+    transition: background-color 200ms ease-in-out;
+}
+
+input[type="checkbox"].toggle-slider + label::before{
+    /* content:""; */
+    width: 4em;
+    height: 0.75em;
+    /* background-color: #DDD; */
+    border-radius: 1em;
+    transition: background-color 200ms ease-in-out;
+}
+
+
+
+input[type="checkbox"].toggle + label::after{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:.2em;
+    content:"";
+    width: 1.8em;
+    height: 1.8em;
+    /* background-color: white; */
+    border-radius: 1em;
+    transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+input[type="checkbox"].toggle-pill + label::after{
+    left:.2em;
+    background-color: white;
+}
+
+input[type="checkbox"].toggle-slider + label::after{
+    left:0;
+    background-color: #6B82F8;
+}
+
+
+input[type="checkbox"].toggle-icon + label::after{
+    content:"\2715";
+    color: #DDD;
+}
+
+input[type="checkbox"].toggle-pill:checked + label::before{
+    background-color: #6B82F8;
+}
+
+input[type="checkbox"].toggle-slider:checked + label::before{
+    background-color: #abb8f9;
+}
+
+input[type="checkbox"].toggle:checked:disabled + label::before{
+    background-color: #DDD;
+}
+
+input[type="checkbox"].toggle-icon:checked + label::after{
+    content: "\2713";
+} 
+
+input[type="checkbox"].toggle-icon--pill:checked + label::after{
+    color: #6B82F8;
+} 
+
+input[type="checkbox"].toggle-icon:checked:disabled + label::after{
+    content: "\2713";
+    color: #DDD;
+} 
+
+input[type="checkbox"].toggle-slider:disabled + label::after{
+    background-color: rgb(189, 188, 188);
+} 
+
+input[type="checkbox"].toggle-pill:checked + label::after{
+    transform: translateX(100%);
+}
+
+input[type="checkbox"].toggle-slider:checked + label::after{
+    transform: translateX(130%);
+}
+
+input[type="checkbox"].toggle-slider:hover + label::after{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+input[type="checkbox"].toggle-slider:disabled + label::after{
+    box-shadow: none;
+}
+
+
+input[type="checkbox"].toggle:checked + label{
+    color: red;
+}
+
+
+
+/* .switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: lightgrey;
+    border-radius: 20px;
+}
+
+.slider::before{
+    position: absolute;
+    content:"";
+    height: 26px;
+    width: 26px;
+    
+    left: 4px;
+    bottom: 4px;
+    
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+input:checked + .slider {
+    background-color: #6B82F8;
+} */
