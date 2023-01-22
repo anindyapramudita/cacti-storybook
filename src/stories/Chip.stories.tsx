@@ -55,12 +55,3 @@ OutlinedClosable.args = {
   type: 'outlined',
   closable: true
 };
-
-export const OutlinedActive = Template.bind({});
-OutlinedActive.args = {
-  label: 'Adjust',
-  startIcon: <AdjustIcon adjustIconColor='grey'/>,
-  type: 'outlined',
-  closable: true,
-  isActive: true
-};

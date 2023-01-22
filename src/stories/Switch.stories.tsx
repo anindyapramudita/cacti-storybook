@@ -24,7 +24,7 @@ PillSwitchWithIcon.args = {
 
 export const PillSwitchDisabled = Template.bind({});
 PillSwitchDisabled.args = {
-  isDisabled: true
+  disabled: true
 };
 
 export const SliderSwitch = Template.bind({});
@@ -41,5 +41,5 @@ SliderSwitchWithIcon.args = {
 export const SliderSwitchDisabled = Template.bind({});
 SliderSwitchDisabled.args = {
   variant:'slider',
-  isDisabled: true
+  disabled: true
 };
